@@ -1,0 +1,268 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "hooks",
+						"type": "address"
+					}
+				],
+				"name": "HookAddressNotValid",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "InvalidHookResponse",
+				"type": "error"
+			}
+		],
+		"devdoc": {
+			"errors": {
+				"HookAddressNotValid(address)": [
+					{
+						"params": {
+							"hooks": "The address of the hooks contract"
+						}
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"HookAddressNotValid(address)": [
+					{
+						"notice": "Thrown if the address will not lead to the specified hook calls being called"
+					}
+				],
+				"InvalidHookResponse()": [
+					{
+						"notice": "Hook did not return its selector"
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {},
+			"notice": "V4 decides whether to invoke specific hooks by inspecting the leading bits of the address that the hooks contract is deployed to. For example, a hooks contract deployed to address: 0x9000000000000000000000000000000000000000 has leading bits '1001' which would cause the 'before initialize' and 'after modify position' hooks to be used.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/github/Uniswap/v4-core/contracts/libraries/Hooks.sol": "Hooks"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/github/Uniswap/v4-core/contracts/interfaces/IFees.sol": {
+			"keccak256": "0x2fb66160acff9b1a6031e3ada15e4271b25399d6b921dc17679cde1e50f566e2",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://7bb4c14e2f3bc0c92729b3fc24f57aaaaf9bd1930411aa937afd49e2c3811bfb",
+				"dweb:/ipfs/QmP8kj9hvpDhWBrjuZUmxX7UAsbbkU6bceRKHdwg66MpPK"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/interfaces/IHooks.sol": {
+			"keccak256": "0x42fd95c9264ccbec66798f03fbbbeeb61d54f1f2809d30589238867e61a96d72",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://5b5788eba5cd0b02431f2a0a4b438fe6673d78b58d69a33e268c0c68f46ece75",
+				"dweb:/ipfs/Qmej6gC75n761FyegEBrSWbQKrkKrBxxcrNWMdLRvQ4fck"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/interfaces/IPoolManager.sol": {
+			"keccak256": "0xbf22d411760c5b9605139288455319d06679b246f80702fc97a3bf31b73802e9",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://3ace9352731db17270b2b72ab9e49e269af46a6864983c40e8b01f69adc21340",
+				"dweb:/ipfs/QmS91tWq8EfcN2XzKXJBTSyypadgDaeE7y73PG37ana6vM"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/interfaces/external/IERC20Minimal.sol": {
+			"keccak256": "0x8dc5ee72426906aeb12f4ae6a2426df059491739bd5cbdb8ea4a3e26970436c6",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://f7e30dbbc972cb78d169c8845d6210d27490c8534e68a20d4f296b11ec727b92",
+				"dweb:/ipfs/QmXBvaWaAnPW25YGVm2sMbf5mwrzLapUcqPnrNiiGGXxmA"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/libraries/BitMath.sol": {
+			"keccak256": "0x652cd36970d953b3067c766b3b0c0063d4c403eba7352df09ec10dcc868910d9",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://e357b092171edb755c8514b4b4ae758a8b43458c7a23409ebf5afd325fefa2be",
+				"dweb:/ipfs/QmWKRWT2z15cVbVVDkjqdVnpf8Ck1jytcXbA7zCUevp7b6"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/libraries/FeeLibrary.sol": {
+			"keccak256": "0x9fc00b77978b617d1a9b5c9d024210b43ee5455682982703d3009bfafc1c12b4",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://777acadfdbd1b3c01aa780b2dff49771ae6189e421b7e23be38c2db75b9c1267",
+				"dweb:/ipfs/QmUR443r39JFuYjLi6zCWnW7r15u1gbmkuEd6e43Br4gyL"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/libraries/FixedPoint128.sol": {
+			"keccak256": "0x1f015a7a107f4c471985a958f1bfbc1710948f9bcd3786a02310bc0ad5080c69",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://a1cacac08675284f319d151f6bc5d1c66cf1d54c5dad1c620a2e1e1336cbb93a",
+				"dweb:/ipfs/QmPf8vQ3mBqniKHwvS1DDEFrV5dJfZSL6mMi9JVy6omQaz"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/libraries/FixedPoint96.sol": {
+			"keccak256": "0x7731aeeba692b0ca5dac8f27803ec9e5ce98795a554c09ae05c220861bd0314e",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://963a8155e442d31c4541c387d333db0c02941ae3517e9173ad30ebcb4f6a14e9",
+				"dweb:/ipfs/QmevAr8oG4WSoi5gBqQ53VzBuFbDKoZHfJwjuTmVhzm8Tc"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/libraries/FullMath.sol": {
+			"keccak256": "0x6d8760794ed38264579c5da7b2afe8ff5543de999180850bc08687b77dce36ea",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0e72da6f868ba5f5c829f78f649286c6b5922a8cda0317dfbb156b8a4d27fb24",
+				"dweb:/ipfs/QmUQDZciNFhy4AFGXfYvoy22ihPc7ehvypeRVQwvVcD3vJ"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/libraries/Hooks.sol": {
+			"keccak256": "0x5015985a12cecb006731861d738d79d489991ef64cddf648d5c4224c775bf28e",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://c34ab145698f6c7ab48a1f0315b7782fb2179f1643d47cfa620f6509d23e8092",
+				"dweb:/ipfs/QmRzyb1F9KcXTEqHeLLMc4PHZzbN4VFbxg8bRzEX33Hpfq"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/libraries/Pool.sol": {
+			"keccak256": "0x57005bc70f6d8b7ec7398f1c38a9ad22d78db33ae3086965f6f3fc74b5842e81",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://a01c7897184cc09a0cecc1e86c2a25e03e55d4db27af694d7c085f4126832ec3",
+				"dweb:/ipfs/QmZ2EdPNc7vU1YPMVQ4ym9d5pkWPXhuqdToqX6UCgsHTHS"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/libraries/Position.sol": {
+			"keccak256": "0x1319e4c172e31427c3b3521dd3c9c9c3949da22e25c9919ae57c47a8c9328e43",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://1e0885e8e035681836fe02213e165d1ab48cf2488cf6ba8f01964b4b026d2b46",
+				"dweb:/ipfs/QmR4W3DZYYvctASLFnm7Sf4wk2L77gwNRrTS2mBqtiUaud"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/libraries/SafeCast.sol": {
+			"keccak256": "0xb459cbf9f2cda4c38c11916e888cc2afbe4297c5ae6f50a0976eb83ed0dc9b25",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://5608698d33b18d3f49e3fa1fbdf6e7c6383378f7d53c914dcf14a0411cf7a79b",
+				"dweb:/ipfs/QmbF4VWDcTPzH17aczU6eCUcqTp9Be7xiuBGB5TMWmtJAi"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/libraries/SqrtPriceMath.sol": {
+			"keccak256": "0x62cb03c7ce6ce037c82fa74e5aabb2431d6b4ddbca1458efdabf5d6af9ca6f90",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://206e025889f55aa8e5d9db2f846460394b54d6dc6d80a5e4ca1d4b70edd98188",
+				"dweb:/ipfs/QmNSzKqtUDXHzgXXDjdNv3ZnHZE3LU4KhwNmkrcWtTRGqk"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/libraries/SwapMath.sol": {
+			"keccak256": "0xac5b75b36ff928e88cbec828bdc9db03e681cc3b337d5d7f6be9fd617b3fef7f",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://6aaea2ecabdb3fec93c7c6be19ea3a034cf396a59ab96f61c57b5214c04b5a6e",
+				"dweb:/ipfs/QmYyd4ExT6xbvEHZTQBv9nZuvU6xjB6EN4uY8TmK8Tceqv"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/libraries/TickBitmap.sol": {
+			"keccak256": "0x7cccb8dff4c76da872a827f1549dc44cdff384d123e77a5361a02a31902bf15c",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://88f850cd5bd2bbada4d9514f2516804392c7b23dc2cb541b74e9c88d0a351dcd",
+				"dweb:/ipfs/QmZh9LvKUG23oFUZXAAa5gn77MguAbZ41VGjkES5U8N9Em"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/libraries/TickMath.sol": {
+			"keccak256": "0xadffea78a3eed37613b57766d87c0bdb9454d2df39de90d7a450e4a8b3207e56",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://c5043430807061e5ccc82986c59b2e074457ff608111a8bd51b413ceaf661c78",
+				"dweb:/ipfs/QmXjqKzCrngzidTRmuLUFvwNPqMKtd8xVFLVCycRfEQcWo"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/libraries/UnsafeMath.sol": {
+			"keccak256": "0x2a8cb75af05f8557b698b089a0ab19e24279fffb7e87cddf5794404c7eaf1c69",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://85f68e6d614205f3f0f55f6ac41805e3a7d523d95bda1c443f2e75444443ffe3",
+				"dweb:/ipfs/QmdCheMqxWNx4CbxG5MH9BUQeSMeeXF6DHkf7Aax4duRUe"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/types/BalanceDelta.sol": {
+			"keccak256": "0xb88fc16f2ae715bd796e5cdb77c2297117f18ce2183288ae4680d7f20cce5f85",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://829baa2d4becbf8f0298fcaafb2305cf57bab5bcccdf8ac10d171bbb68c37e6f",
+				"dweb:/ipfs/QmPs18e2YgwJECriyft46Rp7p9iECPEpkNXV1gom5NosfF"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/types/Currency.sol": {
+			"keccak256": "0x4d014343e436dd8d3d583adb194e47c1d4a92e6bc7470f8e637407e75627d9a2",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://c72d05c4dd42094f24189fffd092387b820911dde0208d1559999cda45a17e8d",
+				"dweb:/ipfs/QmUHz1jLPQC5Yd3eJn5yujM83dAqbMzAhoy8omYCdbySxh"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/types/PoolId.sol": {
+			"keccak256": "0xd28e4ac2a0874b5372ab3873a263701ce625a840fc563c63d5ad8f7b3272f325",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://0575161cdbe0c3ef8fa023a5f606563ec793bad863446822bdf310bce8dbcccd",
+				"dweb:/ipfs/QmUM26Umcr3LEfM2sZ6eGtgBa2KmQde6Ea6898n8tt38mv"
+			]
+		},
+		".deps/github/Uniswap/v4-core/contracts/types/PoolKey.sol": {
+			"keccak256": "0x4928c59e15db5af3bff68f4d9243ebe11a1dc4a4cbfa57c564db376086a902ce",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://235245bf768c3b708be7837f6aa3bb6bcab7b25036df99e2cc257363350f6ea7",
+				"dweb:/ipfs/QmWPurWV2vYoaVNxZyj4DkCqS8Aode5U9JE8WHmbyVR8jH"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC1155/IERC1155.sol": {
+			"keccak256": "0xcab667ddad478ff0d39c2053ca77fac778af8483c18ab07d810277b4216fd582",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://919c7ea27c77275c3c341da0c4a26a66a20ed27605fbe8becf11f58ec3bc65bf",
+				"dweb:/ipfs/QmRLKyVE2n7e2Jo4bLNn8eLgqqhNGYnVQyjJPWdr8poskf"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+			]
+		}
+	},
+	"version": 1
+}
